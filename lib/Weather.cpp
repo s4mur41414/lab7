@@ -69,6 +69,9 @@ bool WeatherForecast::Work() {
         }
         else if (input_symbol == '+') {
             ++cities_[current_city_].days_;
+            if (cities_[current_city_].days_ == 14) {
+                --cities_[current_city_].days_;
+            }
             if (cities_[current_city_].days_ > cities_[current_city_].max_days_) {
                 ++cities_[current_city_].max_days_;
                 cities_[current_city_].GetWeather();
