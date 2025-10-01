@@ -26,15 +26,16 @@ void Weather::SetValue(nlohmann::json& json_data) {
     weather_code = json_data["current"]["weathercode"].get<int>();
 }
 
-City::City(const std::string& name, int32_t days) : 
+City::City(const std::string& name, int32_t days) :
     name_(name),
     days_(days),
     max_days_(days)
-{}
+{
+}
 
 bool City::GetCordinates() {
     cpr::Response resp = cpr::Get(cpr::Url{ "https://api.api-ninjas.com/v1/city" },
-        cpr::Header{ {"X-Api-Key", "Your_key"} },
+        cpr::Header{ {"X-Api-Key", "your_key"} },
         cpr::Parameters{ {"name", name_} });
 
     if (resp.status_code != kNoErrorCode) {

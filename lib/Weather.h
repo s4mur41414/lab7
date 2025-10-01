@@ -28,6 +28,10 @@ public:
     bool Work();
     void ShowWeatherForecast(int32_t curr_city);
 
+    std::string Date(int day_offset) const;
+    std::string TableHeading(int day_number) const;
+    std::string TableBottom() const;
+
     std::vector<City> cities_;
     int current_city_;
 

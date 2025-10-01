@@ -2,20 +2,20 @@
     "cities": [
         {
             "name": "Tyumen",
-            "count_days": 2
+            "days": 2
         },
 
         {
             "name": "Moscow",
-            "count_days": 2
+            "days": 2
         },
 
         {
             "name": "Murmansk",
-            "count_days": 2
+            "days": 2
         }
 
         
     ],
-    "update_frequency": 30
+    "frequency": 30
 }
